@@ -13,13 +13,12 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
   align-items: center;
   position: fixed;
   width: 100%;
-  padding-left: 80px;
+  padding: 1rem 80px;
   height: 70px;
-  background: rgba(40, 39, 39, .7);
+  background: rgba(40, 39, 39, 0.7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   z-index: 4;
@@ -47,7 +46,6 @@ a {
   cursor: pointer;
 }
 
-
 .link {
   cursor: pointer;
   font-size: 18px;
@@ -68,8 +66,7 @@ a {
 }
 
 .link::before {
-  content: '';
-
+  content: "";
 }
 
 .link--nav {
@@ -210,10 +207,14 @@ nav ul li span:nth-child(4) {
 #menu {
   min-height: auto;
   background-color: #141414;
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
- 
+  /* padding-top: 100px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 50px; */
+  /* shortcut: top right bottom left */
+  padding: 100px 80px 50px 80px;
 }
 
 #about-us {
@@ -234,23 +235,21 @@ nav ul li span:nth-child(4) {
   padding: 1.5rem;
   color: #ffff;
   padding-left: 80px;
-
 }
 
 .title-product {
   color: #ffff;
   font-size: 30px;
   font-family: Poppins;
-  padding: 1.5rem;
+  margin: 10px 0;
   color: #ffff;
-  padding-left: 80px;
-  padding-bottom: 12px;
-  width:100%;
+  /* padding: 1.5rem; */
+  /* padding-left: 80px; */
 }
 
-hr {
-  width: 100%;
-  margin: auto;
+.title-product + hr {
+  /* ibigsabihin ng + na yan magkasunod kase sila sa html */
+  margin-bottom: 10px;
 }
 
 .description {
@@ -266,7 +265,7 @@ hr {
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  padding: 77px;
+  /* padding: 77px; */
   padding-top: 20px;
   row-gap: 40px;
 }
@@ -283,5 +282,4 @@ hr {
   height: 100%;
   object-fit: cover;
   width: 100%;
-
 }
