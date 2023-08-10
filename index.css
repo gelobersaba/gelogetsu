@@ -1,13 +1,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins , sans-serif";
+  font-family: Poppins;
   font-weight: normal;
   scroll-behavior: smooth;
 }
 
 body {
   scroll-behavior: smooth;
+  /* overflow: visible; */
 }
 
 .header {
@@ -22,6 +23,7 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   z-index: 4;
+
 }
 
 .header .navigation {
@@ -70,7 +72,7 @@ a {
 }
 
 .link--nav {
-  font-family: Poppins;
+
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -140,6 +142,7 @@ a {
 
 .title {
   font-size: 4rem;
+  font-family: Poppins Medium;
 }
 
 nav ul li {
@@ -218,20 +221,69 @@ nav ul li span:nth-child(4) {
 }
 
 #about-us {
-  height: 100vh;
-  background-color: #282828;
+  height: 90vh;
   padding-top: 100px;
+  background-image: url(/assets/aboutbg.jpg);
+
 }
 
+#about-us-2 {
+  height: 40vh;
+  background-color: #131111;
+  padding-top: 120px;
+  width: 100%;
+  display: flex;
+}
+
+#our-testimonials {
+  height: 86vh;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+}
+
+#ceo-statement {
+  height: 40vh;
+  background-color: #131111;
+}
+
+#records {
+  height: 30vh;
+  background-image: url(/assets/records\ bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+#services {
+  height: 70vh;
+  background-color: #141414;
+}
+
+
+
 #contact-us {
-  height: 100vh;
-  background-color: #303131;
-  padding-top: 100px;
+  height: 90vh;
+
+  padding-top: 130px;
+  background-image: url(/assets/contactusbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+#footer {
+  height: 25vh;
+  background-color: #0d0d0d;
+  padding-top: 40px;
+
 }
 
 .menu-title {
   font-size: 40px;
-  font-family: Poppins;
+
   padding: 1.5rem;
   color: #ffff;
   padding-left: 80px;
@@ -240,24 +292,27 @@ nav ul li span:nth-child(4) {
 .title-product {
   color: #ffff;
   font-size: 30px;
-  font-family: Poppins;
+
   margin: 10px 0;
   color: #ffff;
   /* padding: 1.5rem; */
   /* padding-left: 80px; */
+  padding-top: 10px;
 }
 
-.title-product + hr {
-  /* ibigsabihin ng + na yan magkasunod kase sila sa html */
-  margin-bottom: 10px;
+.title-product+hr {
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .description {
-  color: #e2d8d8;
-  font-size: 15px;
+  color: #ffffff;
+  font-size: 14px;
   position: absolute;
-  top: 10rem;
+  top: 8.3rem;
   left: 10px;
+  background-color: #4e4a4a35;
+  font-family: Poppins;
 }
 
 .all-product {
@@ -267,15 +322,20 @@ nav ul li span:nth-child(4) {
   grid-template-columns: repeat(4, 1fr);
   /* padding: 77px; */
   padding-top: 20px;
-  row-gap: 40px;
+  row-gap: 20px;
+  margin-bottom: 10px;
+
 }
 
 .all-product .container-product {
   background-color: rgb(67, 65, 63);
-  height: 12rem;
+  height: 10rem;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+  width: 19rem;
+
 }
 
 .all-product .container-product .product-img {
@@ -283,3 +343,437 @@ nav ul li span:nth-child(4) {
   object-fit: cover;
   width: 100%;
 }
+
+.container-product::before,
+.container-product::after {
+  content: "";
+  position: absolute;
+}
+
+.all-product .container-product:hover {
+  box-shadow: 0px 0px 20px 1.5px #fffbf73f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+.container {
+  position: relative;
+  font-family: sans-serif;
+}
+
+.all-product .container-product {
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: all ease .3s;
+}
+
+.title-about-us {
+  color: #ffff;
+  font-size: 50px;
+
+  padding-top: 13rem;
+  letter-spacing: 2px;
+}
+
+
+
+.description-about-us {
+  color: #ffff;
+  font-family: sans-serif;
+  /* text-transform: uppercase; */
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.about-us-2 {
+  height: 100;
+}
+
+.about-our-restaurant {
+  color: #ffff;
+}
+
+.title-our-restaurant {
+  color: #ffff;
+  font-size: 35px;
+  text-align: left;
+  padding-left: 13rem;
+  font-family: Poppins Medium;
+  padding-top: 0rem;
+
+
+}
+
+.description-our-restaurant {
+  color: #ffff;
+  font-size: 13px;
+  text-align: left;
+  padding-left: 13rem;
+  letter-spacing: 1px;
+
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+  row-gap: 10px;
+
+}
+
+.title-quality {
+  color: #ffff;
+}
+
+progress {
+
+  width: 400px;
+  height: 10px;
+  background: crimson;
+
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: rgb(71, 47, 47);
+}
+
+
+
+
+.testimonials {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+.testimonials .testimonials-container {
+  background-color: #0d0d0d;
+  height: 20rem;
+  position: relative;
+}
+
+.testimonials .testimonials-container .testimonials-image {
+  height: 20rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.testimonials-information {
+  color: #ffff;
+  padding-top: 3rem;
+  font-size: 20px;
+
+}
+
+.testimonials-image {
+  height: 3rem;
+  width: 3rem;
+  transition: transform 0.5s;
+}
+
+.testimonials-image:hover {
+  transform: scale(1.2);
+}
+
+.image-con {
+  overflow: hidden;
+}
+
+.description-testimonials {
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+.line-testi {
+  width: 15rem;
+  margin-top: .4px;
+}
+
+.name {
+  font-size: 20px;
+  color: #b44949;
+  font-family: Poppins Medium;
+}
+
+.role {
+  font-size: 13px;
+
+  margin-bottom: 3px;
+
+}
+
+.rating {
+  margin-bottom: -16px;
+}
+
+.logo-quote {
+  padding-top: 2rem;
+  height: 40px;
+  width: 40px;
+}
+
+.ceo-name {
+  color: #ffff;
+  font-size: 15px;
+}
+
+.statement {
+  color: #ffff;
+  font-size: 10px;
+
+  padding-top: 2rem;
+  /* text-transform: uppercase; */
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.count {
+  color: #953f3f;
+  font-size: 40px;
+  padding-left: 20rem;
+  padding-top: 4rem;
+  font-family: Poppins Medium;
+}
+
+.title-record {
+  color: #ffff;
+  font-size: 18px;
+  padding-left: 21rem;
+  /* display: flex; */
+}
+
+.title-special-features {
+  color: #ffff;
+  font-size: 30px;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: Poppins Medium;
+
+
+
+}
+
+.table-logo {
+  height: 3rem;
+  width: 3rem;
+
+}
+
+.feature {
+  display: flex;
+  width: 25rem;
+  height: 6rem;
+  text-align: left;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+
+
+}
+
+.feature-title {
+  padding-left: 1rem;
+  color: #b44949;
+  font-size: 19px;
+  font-family: Poppins Medium;
+}
+
+.feature-description {
+  color: #ffffff;
+  font-size: 15px;
+  padding-left: 1rem;
+}
+
+.features-container {
+  display: grid;
+  align-items: center;
+  flex-direction: row;
+  grid-template-columns: repeat(3, 0fr);
+
+
+}
+
+.title-contact-us {
+  color: #ffff;
+  font-size: 30px;
+
+  padding-top: 65px;
+}
+
+.line-bar {
+  width: 5rem;
+  margin-top: 9px;
+
+
+}
+
+.title-get-touch {
+  color: #ffff;
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: Poppins Medium;
+}
+
+.description-contact-us {
+  color: #ffff;
+  font-family: Poppins Medium;
+  
+  padding-top: 30px;
+}
+
+.informations {
+  color: #ffff;
+  padding-top: 5rem;
+  padding-left: 15rem;
+}
+
+.title-informations {
+  font-family: Poppins Medium;
+  font-size: 20px;
+}
+
+.info {
+  padding-top: 5px;
+}
+
+.socials {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(3, 58px);
+  padding-left: 40px;
+}
+
+.logo-socials-con {
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.2);
+}
+.title-of-informations {
+  color: #ffff;
+  font-family: Poppins Medium;
+
+}
+.contact-us-contents{
+  display: flex;
+}
+.message-us{
+  padding-left: 4rem;
+  padding-top: 5rem;
+
+}
+.textbox{
+  background-color: rgba(61, 57, 57, 0.386);
+  border: none;
+  border-bottom: 3px solid #ccc;
+  padding: 7px;
+  font-size: 9px;
+  outline: none;
+  width: 20rem;
+}
+
+.textbox-fullname{
+  font-size: 13px;
+  background-color: rgba(61, 57, 57, 0.386);
+  border: none;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  width: 20rem;
+  padding: 10px;
+  color: #ffff;
+
+}
+
+.textbox-email{
+  font-size: 13px;
+  background-color: rgba(61, 57, 57, 0.386);
+  border: none;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  width: 20rem;
+  padding: 10px;
+  color: #ffff;
+}
+
+.textbox-address{
+  font-size: 13px;
+  background-color: rgba(61, 57, 57, 0.386);
+  border: none;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  width: 19.5rem;
+  padding: 13px;
+  color: #ffff;
+  height: 15px;
+}
+
+.textbox-message{
+  font-size: 12px;
+  background-color: rgba(61, 57, 57, 0.386);
+  border: none;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  width: 19.5rem;
+  padding:13px;
+  color: #ffff;
+  height: 50px;
+  padding-top: 0;
+  /* overflow-x: hidden; */
+}
+
+.con-email{
+  padding-top: 12px;
+}
+
+.con-address{
+  padding-top: 12px;
+}
+
+.con-message{
+  padding-top: 12px;
+}
+
+.others{
+  display: flex;
+  color: #ffff;
+  width: 90rem;
+  gap: 20px;
+  padding-top: 20px;
+  height: 20px;
+  padding-left: 40px;
+  
+}
+
+.text-others{
+  font-family: Poppins Medium;
+  font-size: 17px;
+  
+}
+
+.all-rights-reserved{
+  color: #ffff;
+  padding-top: 30px;
+  width: 50rem;
+  margin-left: 0;
+  padding-left: 40px;
+
+
+}
+
